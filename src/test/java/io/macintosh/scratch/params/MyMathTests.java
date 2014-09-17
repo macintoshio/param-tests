@@ -15,14 +15,17 @@ import org.junit.runners.Parameterized.Parameters;
 public class MyMathTests {
 	
 	@Parameters
-	public static Collection<Object[]> getData() {
-		Object[][] data = new Object[][]{
-				{new int[]{1}, 1, 1},
-				{new int[]{1,1}, 2, 1},
-				{new int[]{1,-1}, 0, 0},
-				{new int[]{0,4}, 4, 2},
+	public static Collection<Object[]> getTestScenarios() {
+		Object[][] scenarios = new Object[][]{
+				{// scenario 1
+					new int[]{1}, // list of numbers to operate on
+					1, // sumResult
+					1}, // avgResult
+				{new int[]{1,1}, 2, 1}, // scenario 2
+				{new int[]{1,-1}, 0, 0}, // scenario 3
+				{new int[]{0,4}, 4, 2}, // scenario 4
 				};
-		return Arrays.asList(data);
+		return Arrays.asList(scenarios);
 	}
 
 	private MyMath math;
