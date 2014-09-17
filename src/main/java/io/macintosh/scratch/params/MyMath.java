@@ -11,8 +11,10 @@ public class MyMath {
 	}
 
 	public int avg(int[] vals) {
-		int sum = sum(vals);
-		int avg = sum / vals.length; // simple; no rounding
+		int avg = 0;
+		if(vals.length > 0) {
+			avg = sum(vals) / vals.length; // simple; no rounding
+		}
 		return avg;
 	}
 
